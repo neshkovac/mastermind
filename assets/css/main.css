@@ -1,0 +1,219 @@
+* {
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(219, 219, 219);
+
+}
+
+/* .left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.clear-left {
+    clear: left;
+}
+
+.clear-right {
+    clear: right;
+}
+
+.clearfix {
+    clear: both;
+} */
+
+.text-center {
+    text-align: center;
+}
+
+.header {
+    margin: 7vh auto 2vh auto;
+}
+
+.footer {
+    margin: 2vh auto;
+}
+
+.footer img {
+    max-width: 5vw;
+}
+
+.header,
+.footer {
+    display: flex;
+    /* width: 40vw; */
+    justify-content: center;
+    background-color: #fff;
+}
+
+.main,
+.header,
+.footer {
+    width: 40vw;
+}
+
+
+.main {
+    background-color: #fff;
+    display: flex;
+    height: 70vh;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.row {
+    display: flex;
+    flex-basis: 100%;
+    justify-content: space-evenly;
+
+}
+
+.row:not(.color-legend-row):first-child {
+    padding-top: 5vh;
+}
+
+.row:last-child {
+    margin-bottom: 5vh;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 50%;
+    flex-grow: 0;
+}
+
+.cell {
+    border: 1px solid black;
+    height: 3vw;
+    width: 3vw;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50px;
+    transition: background-color .5s ease-in-out, border-radius .1s ease-in-out;
+    animation-name: addBackground;
+    animation-duration: .45s;
+    animation-timing-function: ease-in;
+
+}
+
+
+.col-2 .row:first-child {
+    visibility: hidden;
+}
+
+.color-legend-row {
+    display: flex;
+}
+
+.color-cell {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+
+.legend-col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.legend-col:not(:last-child) {
+    margin-left: 30px;
+}
+
+.legend-col:last-child {
+    margin-left: 30px;
+}
+
+.legend-paragraph {
+    font-size: 1em;
+    margin-block-end: 5px;
+    margin-block-start: 5px;
+}
+
+.red,
+.green {
+    margin-bottom: 5px;
+}
+
+.red {
+    background-color: red;
+}
+
+.green {
+    background-color: green;
+}
+
+.col-1 .row:last-child {
+    justify-content: flex-start;
+    align-content: flex-start;
+}
+
+.row-0 .cell {
+    background-image: url('../img/question-mark.png');
+}
+
+.background-angular,
+.background-react,
+.background-javascript,
+.background-css {
+    cursor: pointer;
+}
+
+.background-angular {
+    background-image: url('../img/angular.png');
+}
+
+.background-css {
+    background-image: url('../img/css.png');
+}
+
+.background-javascript {
+    background-image: url('../img/javascript.png');
+}
+
+.background-react {
+    background-image: url('../img/react.png');
+}
+
+.disabled {
+    border-color: rgba(167, 162, 162, 0.678);
+}
+
+.focused {
+    box-shadow: inset 0 0 10px rgb(219, 219, 219);
+}
+
+.matching-green,
+.matching-red {
+    border-radius: 50%;
+}
+
+.matching-green {
+    background-color: green;
+}
+
+.matching-red {
+    background-color: red;
+}
+
+@keyframes addBackground {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: 100% 0;
+    }
+
+}
